@@ -6,11 +6,11 @@ function getRandomHexColor() {
 
 const btnCreateEl = document.querySelector("[data-create]");
 const btnDestroyEl = document.querySelector("[data-destroy]");
-let amount = document.querySelector("#controls input");
+const inputEl = document.querySelector("#controls input");
 const boxesDivEl = document.querySelector("#boxes");
 
 btnCreateEl.addEventListener("click", () => {
-  amount = Number(amount.value);
+  const amount = Number(inputEl.value);
   createBoxes(amount);
 });
 
