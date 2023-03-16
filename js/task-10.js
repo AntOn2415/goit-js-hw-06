@@ -15,15 +15,17 @@ btnCreateEl.addEventListener("click", () => {
 });
 
 function createBoxes(amount) {
+  const boxDivEl = [];
   let size = 30;
   for (let i = 0; i < amount; i++) {
-    const boxDivEl = document.createElement(`div`);
-    boxDivEl.style.width = `${size}px`;
-    boxDivEl.style.height = `${size}px`;
+    const boxEl = document.createElement(`div`);
+    boxEl.style.width = `${size}px`;
+    boxEl.style.height = `${size}px`;
     size += 10;
-    boxDivEl.style.backgroundColor = getRandomHexColor();
-    boxesDivEl.appendChild(boxDivEl);
+    boxEl.style.backgroundColor = getRandomHexColor();
+    boxDivEl.push(boxEl);
   }
+  boxesDivEl.append(...boxDivEl);
 }
 
 btnDestroyEl.addEventListener("click", destroyBoxes);
